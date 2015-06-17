@@ -15,7 +15,11 @@ task wrapper(type:Wrapper) {
     gradleVersion = '1.11'
 }
 
-
+buildscript {
+    dependencies {
+       // classpath group: 'com.gradle.tasks', name: 'customPlugin', version: '1.0'
+    }
+}
 
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.3'
@@ -23,6 +27,10 @@ dependencies {
     testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
     runtime 'com.h2database:h2:1.3.170'
     runtime 'mysql:mysql-connector-java:5.1.22'
+
+    //use gradle api in application
+    compile gradleApi()
+    compile localGroovy()
 }
 
 task loadTestData {
@@ -46,32 +54,7 @@ task runApp(type:JavaExec, dependsOn: classes) {
     classpath sourceSets.main.runtimeClasspath
 }
 
-task createDatabase(type: MysqlTask) {
-    sql = 'CREATE DATABASE IF NOT EXISTS tlcDev'
+task createDatabase(type: com.gradle.tasks.MysqlTask) {
+    sql = 'CREATE DATABASE IF NOT EXISTS newworld'
 }
 
-class MysqlTask extends DefaultTask {
-
-    def hostname = 'localhost'
-    def port = 3306
-    def sql
-    def database
-    def username = 'root'
-    def password = 'zinzilee'
-
-    @TaskAction
-    def runQuery() {
-        def cmd
-
-        if(database) {
-            cmd = "mysql -u ${username} -p${password} -h${hostname} -P ${port} ${database} -e "
-        }
-        else {
-            cmd = "mysql -u ${username} -p${password} -h ${hostname} -P ${port} -e "
-        }
-
-        project.exec {
-            commandLine = cmd.split().toList() + sql
-        }
-    }
-}
