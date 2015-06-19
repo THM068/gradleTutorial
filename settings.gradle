@@ -1,1 +1,8 @@
 include 'groovy-orm'
+include 'krill'
+include 'tropicalFish'
+
+rootProject.children.each { project->
+    println "The subprojects are ${project}"
+    project.buildFileName = "${project.name}.gradle"
+}

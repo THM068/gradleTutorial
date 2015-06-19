@@ -1,3 +1,5 @@
+evaluationDependsOn(':groovy-orm')
+
 apply plugin:'groovy'
 apply plugin:'java'
 apply plugin:'eclipse'
@@ -22,6 +24,22 @@ buildscript {
     dependencies {
        // classpath group: 'com.gradle.tasks', name: 'customPlugin', version: '1.0'
     }
+}
+
+allprojects {
+    task hello << { task-> println "I'm $task.project.name" }
+}
+
+subprojects {
+    hello << { println "I depend on advancedGroovy ...."}
+}
+
+configure(subprojects.findAll {it.name != 'tropicalFish'}) {
+    hello << { println "- I love to spend time in the arctic waters."}
+}
+
+project(':krill').hello << {
+    println "I am a krill and I am the coolest animal to swim the planet."
 }
 
 dependencies {
@@ -72,5 +90,9 @@ task createDatabase(type: com.gradle.tasks.MysqlTask) {
 
 task printDeps(dependsOn: build) {
     configurations*.dependencies.each { dep-> println dep }
+}
+
+task runner {
+    println "${project.name} runner"
 }
 

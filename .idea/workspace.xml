@@ -9,6 +9,8 @@
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/buildSrc/.gradle/" />
     <ignored path="$PROJECT_DIR$/buildSrc/build/" />
+    <ignored path="$PROJECT_DIR$/groovy-orm/.gradle/" />
+    <ignored path="$PROJECT_DIR$/groovy-orm/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +33,10 @@
                 <option name="myItemId" value="" />
                 <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
               </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="advancedGroovy" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
             </PATH>
           </tree_state>
         </projects_view>
@@ -45,8 +51,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38393977">
-              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            <state vertical-scroll-proportion="1.6959064">
+              <caret line="94" column="12" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -56,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/settings.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -66,7 +72,17 @@
         <entry file="file://$PROJECT_DIR$/groovy-orm/groovy-orm.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/krill/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -77,10 +93,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-              <folding>
-                <element signature="e#107#108#0" expanded="true" />
-                <element signature="e#163#164#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,10 +135,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-              <folding>
-                <element signature="e#143#144#0" expanded="true" />
-                <element signature="e#194#195#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,6 +161,10 @@
           </key>
           <value>
             <list>
+              <ExternalProjectPojo>
+                <option name="name" value=":groovy-orm" />
+                <option name="path" value="$PROJECT_DIR$/groovy-orm" />
+              </ExternalProjectPojo>
               <ExternalProjectPojo>
                 <option name="name" value="advancedGroovy" />
                 <option name="path" value="$PROJECT_DIR$" />
@@ -201,6 +215,10 @@
                 <option name="description" value="Processes resources 'main:resources'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="printDeps" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles a jar archive containing the main classes." />
@@ -328,11 +346,92 @@
             </list>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/groovy-orm">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles classes 'main'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles Java source 'main:java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles Java source 'test:java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes resources 'main:resources'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes resources 'test:resources'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles classes 'test'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/groovy-orm" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
       </map>
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="1434558343250" />
+        <entry key="$PROJECT_DIR$" value="4304064068297" />
         <entry key="$PROJECT_DIR$/../appMonitor" value="1431097683081" />
         <entry key="$PROJECT_DIR$/../buildtools" value="1434014367202" />
       </map>
@@ -644,6 +743,157 @@
                       </ExternalModuleBuildClasspathPojo>
                     </value>
                   </entry>
+                  <entry key="$PROJECT_DIR$/groovy-orm">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-all/2.4.3/472f5124c90a551d7ac7ffa39a4a3ba36ac4586a/groovy-all-2.4.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-math3/3.0/5f8d1d720333aa9a7dee1c949ea70d9ed7da6106/commons-math3-3.0.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/gradle-core-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/groovy-all-2.3.6.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/asm-all-5.0.3.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/ant-1.9.3.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/commons-collections-3.2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/commons-io-1.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/commons-lang-2.6.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/logback-core-1.0.13.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/logback-classic-1.0.13.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/guava-jdk5-17.0.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/jcip-annotations-1.0.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/jul-to-slf4j-1.7.5.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/jarjar-1.3.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/javax.inject-1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/slf4j-api-1.7.5.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/log4j-over-slf4j-1.7.5.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/jcl-over-slf4j-1.7.5.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/ant-launcher-1.9.3.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/gradle-docs-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/gradle-model-core-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/gradle-base-services-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/gradle-model-groovy-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/gradle-base-services-groovy-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/gradle-cli-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/gradle-native-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/jna-3.2.7.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/native-platform-0.10.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/jansi-1.2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/native-platform-osx-i386-0.10.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/native-platform-osx-amd64-0.10.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/native-platform-linux-amd64-0.10.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/native-platform-linux-i386-0.10.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/native-platform-windows-amd64-0.10.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/native-platform-windows-i386-0.10.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/native-platform-freebsd-i386-0.10.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/native-platform-freebsd-amd64-0.10.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/gradle-messaging-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/kryo-2.20.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/reflectasm-1.07-shaded.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/minlog-1.2.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/objenesis-1.2.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/gradle-resources-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-core-impl-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-maven-settings-3.0.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-maven-repository-metadata-3.0.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-plexus-container-default-1.5.5.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-maven-aether-provider-3.0.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-wagon-provider-api-2.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-plexus-cipher-1.7.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-plexus-interpolation-1.14.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-plexus-utils-2.0.6.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-plexus-classworlds-2.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-maven-plugin-api-3.0.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-maven-model-builder-3.0.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-plexus-sec-dispatcher-1.3.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-plexus-component-annotations-1.5.5.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-aether-connector-wagon-1.13.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-maven-compat-3.0.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-wagon-http-2.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-aether-api-1.13.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-maven-settings-builder-3.0.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-aether-spi-1.13.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-maven-core-3.0.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-wagon-http-shared4-2.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-aether-util-1.13.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-maven-artifact-3.0.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-maven-model-3.0.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jarjar-aether-impl-1.13.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/ivy-2.2.0.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/maven-ant-tasks-2.1.3.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jsch-0.1.51.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gson-2.2.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/xbean-reflect-3.4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/bcprov-jdk15-1.46.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-resources-http-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/httpclient-4.2.2.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/nekohtml-1.9.14.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/commons-codec-1.6.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/httpcore-4.2.2.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jcifs-1.3.17.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/xml-apis-1.3.04.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/xercesImpl-2.9.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-plugin-use-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/gradle-tooling-api-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/gradle-wrapper-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-plugins-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/junit-4.11.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/testng-6.3.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/commons-cli-1.2.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/bsh-2.0b4.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jcommander-1.12.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/snakeyaml-1.6.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/hamcrest-core-1.3.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-code-quality-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-jetty-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jetty-6.1.25.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jetty-util-6.1.25.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/servlet-api-2.5-20081211.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jetty-plus-6.1.25.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jsp-2.1-6.1.14.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jetty-annotations-6.1.25.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/geronimo-annotation_1.0_spec-1.0.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jetty-naming-6.1.25.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/core-3.1.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jsp-api-2.1-6.1.14.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-antlr-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/ant-antlr-1.9.3.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/antlr-2.7.7.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-osgi-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/bndlib-2.1.0.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-maven-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/pmaven-common-0.8-20100325.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/pmaven-groovy-0.8-20100325.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/plexus-component-annotations-1.5.2.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-ide-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-announce-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-scala-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-sonar-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/sonar-runner-2.0.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/sonar-batch-bootstrapper-2.9.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-signing-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/bcpg-jdk15-1.46.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-cpp-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-ear-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-javascript-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/rhino-1.7R3.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/simple-4.1.21.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-build-comparison-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-diagnostics-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-reporting-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/jatl-0.2.2.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-publish-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-ivy-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-jacoco-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-build-init-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-language-jvm-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-language-base-2.1.jar" />
+                            <option value="C:/programs_tm/gradle-2.1/lib/plugins/gradle-plugin-development-2.1.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$/groovy-orm" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
                 </map>
               </option>
               <option name="name" value="advancedGroovy" />
@@ -761,10 +1011,11 @@
         <option value="$PROJECT_DIR$/src/main/groovy/com/gradle/tasks/MysqlTask.groovy" />
         <option value="$PROJECT_DIR$/srcAdditional/main/java/com/additional/Person.java" />
         <option value="$PROJECT_DIR$/src/test/groovy/org/gradle/example/HelloWorldSpec.groovy" />
-        <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/groovy-orm/src/main/java/com/test/Car.java" />
-        <option value="$PROJECT_DIR$/groovy-orm/groovy-orm.gradle" />
+        <option value="$PROJECT_DIR$/settings.gradle" />
+        <option value="$PROJECT_DIR$/krill/build.gradle" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/groovy-orm/groovy-orm.gradle" />
       </list>
     </option>
   </component>
@@ -838,11 +1089,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="srcAdditional" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="additional" />
+              <option name="myItemId" value="krill" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -856,37 +1103,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="advancedGroovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="advancedGroovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="groovy-orm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1203,6 +1428,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
@@ -1245,43 +1476,45 @@
       <created>1434542813161</created>
       <option name="number" value="Default" />
       <updated>1434542813161</updated>
-      <workItem from="1434543078334" duration="18881000" />
+      <workItem from="1434543078334" duration="19246000" />
+      <workItem from="1434710350865" duration="4659000" />
+      <workItem from="1434727422809" duration="27000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18881000" />
+    <option name="totallyTimeSpent" value="23932000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1927" y="0" width="1920" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25215054" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295699" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1304,14 +1537,151 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="94" column="12" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/groovy-orm/groovy-orm.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/krill/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/groovy-orm/src/main/java/com/test/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcAdditional/main/java/com/additional/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buildSrc/src/main/groovy/tasks/MysqlTask.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="e#25#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/gradle/example/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/groovy-orm/groovy-orm.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/groovy-orm/src/main/java/com/test/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcAdditional/main/java/com/additional/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buildSrc/src/main/groovy/tasks/MysqlTask.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
-            <element signature="e#143#144#0" expanded="true" />
-            <element signature="e#194#195#0" expanded="true" />
+            <element signature="e#25#58#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/gradle/example/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/gradle/example/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1337,17 +1707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-          <folding>
-            <element signature="e#107#108#0" expanded="true" />
-            <element signature="e#163#164#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/groovy-orm/groovy-orm.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1360,18 +1719,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/groovy-orm/groovy-orm.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/krill/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38393977">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        <state vertical-scroll-proportion="1.6959064">
+          <caret line="94" column="12" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
           <folding />
         </state>
       </provider>
